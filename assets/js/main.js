@@ -26,16 +26,3 @@ if (submenu) submenu.classList.toggle('show');
 });
 });
 
- function changeLanguage(langCode) {
-      if (!langCode) return;
-
-      // Get current page URL
-      const currentUrl = window.location.href;
-
-      // Construct Google Translate URL
-      const translateUrl = `https://translate.google.com/translate?hl=${langCode}&sl=auto&tl=${langCode}&u=${encodeURIComponent(currentUrl)}`;
-
-      // Redirect to translated page
-      window.location.href = translateUrl;
-    }
-
