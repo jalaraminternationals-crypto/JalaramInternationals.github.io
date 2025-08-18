@@ -142,24 +142,29 @@
 </footer>
 <a href="https://wa.me/919429276954?text=Hello+Jalaram+Interneshanal+Import%2FExport%2C+I+am+interested+from+Canada.+Please+share+details." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><img src="../assets/img/whatsapp-icon.png" alt="WhatsApp"></a>
 <script src="../assets/js/main.js"></script>
-    <script>
+   <script>
   // Function to initialize Google Translate
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
-      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
   }
 
-  // Custom function to switch language using cookie & reload
-  window.location.reload();
-
+  // Language switcher function
+  function translateLanguage(lang) {
+    if (!lang) return;
+    const from = 'en';
+    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
+    window.location.reload();
+  }
 </script>
-
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!-- Google Translate Library -->
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
 
 
