@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="country-page">
-   <!-- 🌐 Language Selector -->
+    <!-- 🌐 Language Selector -->
 <div class="language-select">
   <label for="language">🌐 Select Language: </label>
   <select id="language" onchange="translateLanguage(this.value)">
@@ -30,95 +30,87 @@
 
 <!-- Google Translate hidden widget (still required) -->
 <div id="google_translate_element" style="display:none;"></div>
-    <nav>
-        <div class="nav-container">
-            <!-- Logo and name on the left -->
-            <button class="nav-toggle" onclick="toggleMenu()">☰</button>
-            <div class="brand-left">
-                <a href="index.html" class="logo-title">
-                    <img src="assets/img/logo.jpeg" alt="Jalaram Internationals Logo">
-                    <span>Jalaram Internationals</span>
-                </a>
-            </div>
-             <div id="google_translate_element" style="display:none;"></div>
-        </div>
-    </nav>
-  <ul class="menu">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../index.html#about">About Us</a></li>
-    <li class="dropdown">
-<a href="#">Our Products</a>
-<ul class="dropdown-menu">
-<li class="dropdown-sub">
-  <a href="#">Fresh Fruits ▸</a>
-  <ul class="sub-menu">
-    <li><a href="../products/mangoes.html">Mangoes</a></li>
-    <li><a href="../products/grapes.html">Grapes</a></li>
-    <li><a href="../products/pomegranate.html">Pomegranate</a></li>
-    <li><a href="../products/coconut.html">Coconut</a></li>
-      <li><a href="../products/Sapota.html">Sapota</a></li>
-      <li><a href="../products/banana.html">Banana</a></li>
-  </ul>
-</li>
-<li class="dropdown-sub">
-  <a href="#">Fresh Vegetables ▸</a>
-  <ul class="sub-menu">
-    <li><a href="../products/onion.html">Onion</a></li>
-    <li><a href="../products/tomatoes.html">Tomatoes</a></li>
-    <li><a href="../products/lady-finger.html">Lady Finger (Okra)</a></li>
-    <li><a href="../products/brinjal.html">Brinjal</a></li>
-    <li><a href="../products/green-peas.html">Green Peas</a></li>
-  </ul>
-</li>
-<li class="dropdown-sub">
-  <a href="#">Flours ▸</a>
-  <ul class="sub-menu">
-    <li><a href="../products/wheat-flour.html">Wheat Flour</a></li>
-    <li><a href="../products/millet-flour.html">Millet (Juwar) Flour</a></li>
-    <li><a href="../products/raagi-flour.html">Raagi Flour</a></li>
-  </ul>
-</li>
-   <li class="dropdown-sub">
-       <a href="#">Dryfruits ▸</a>
-       <ul class="sub-menu">
-           <li><a href="../products/almonds.html">Almonds</a></li>
-           <li><a href="../products/cashews.html">Cashews</a></li>
-           <li><a href="../products/dates.html">Dates</a></li>
-           <li><a href="../products/Raisins.html">Raisins</a></li>
-           <li><a href="../products/walnuts.html">Walnuts</a></li>
-       </ul>
-   </li>
-    <li class="dropdown-sub">
-        <a href="#">Dehydrated Fruits & Vegetables  ▸</a>
-        <ul class="sub-menu">
-            <li><a href="../products/apricots.html">Apricots</a></li>
-            <li><a href="../products/strawberry.html">Strawberry</a></li>
-            <li><a href="../products/kiwi.html">Kiwi</a></li>
-            <li><a href="../products/carrots.html">Carrots</a></li>
-            <li><a href="../products/potatoes.html">Potatoes</a></li>
-        </ul>
-    </li>
-        <li class="dropdown-sub">
-            <a href="#">Frozen Fruits & Vegetables  ▸</a>
-            <ul class="sub-menu">
-                <li><a href="../products/frozengreen-peas.html">Frozen Green-peas</a></li>
-                <li><a href="../products/corn.html">Corn</a></li>
+
+<nav>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About Us</a></li>
+        <li class="dropdown">
+            <a href="#">Our Products</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-sub">
+                    <a href="#">Fresh Fruits ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/mangoes.html">Mangoes</a></li>
+                        <li><a href="../products/grapes.html">Grapes</a></li>
+                        <li><a href="../products/pomegranate.html">Pomegranate</a></li>
+                        <li><a href="../products/coconut.html">Coconut</a></li>
+                        <li><a href="../products/Sapota.html">Sapota</a></li>
+                        <li><a href="../products/banana.html">Banana</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-sub">
+                    <a href="#">Fresh Vegetables ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/onion.html">Onion</a></li>
+                        <li><a href="../products/tomatoes.html">Tomatoes</a></li>
+                        <li><a href="../products/lady-finger.html">Lady Finger (Okra)</a></li>
+                        <li><a href="../products/brinjal.html">Brinjal</a></li>
+                        <li><a href="../products/green-peas.html">Green Peas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-sub">
+                    <a href="#">Flours ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/wheat-flour.html">Wheat Flour</a></li>
+                        <li><a href="../products/millet-flour.html">Millet (Juwar) Flour</a></li>
+                        <li><a href="../products/raagi-flour.html">Raagi Flour</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-sub">
+                    <a href="#">Dryfruits ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/almonds.html">Almonds</a></li>
+                        <li><a href="../products/cashews.html">Cashews</a></li>
+                        <li><a href="../products/dates.html">Dates</a></li>
+                        <li><a href="../products/Raisins.html">Raisins</a></li>
+                        <li><a href="../products/walnuts.html">Walnuts</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-sub">
+                    <a href="#">Dehydrated Fruits & Vegetables  ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/apricots.html">Apricots</a></li>
+                        <li><a href="../products/strawberry.html">Strawberry</a></li>
+                        <li><a href="../products/kiwi.html">Kiwi</a></li>
+                        <li><a href="../products/carrots.html">Carrots</a></li>
+                        <li><a href="../products/potatoes.html">Potatoes</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-sub">
+                    <a href="#">Frozen Fruits & Vegetables  ▸</a>
+                    <ul class="sub-menu">
+                        <li><a href="../products/frozengreen-peas.html">Frozen Green-peas</a></li>
+                        <li><a href="../products/corn.html">Corn</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
-</ul></li>
-    <li class="dropdown">
-<a href="#">Import/Export</a>
-<ul class="dropdown-menu">
-  <li><a href="../import-export/usa.html">USA</a></li>
-  <li><a href="../import-export/maldives.html">Maldives</a></li>
-  <li><a href="../import-export/dubai.html">Dubai</a></li>
-  <li><a href="../import-export/south-africa.html">South Africa</a></li>
-  <li><a href="../import-export/canada.html">Canada</a></li>
-  <li><a href="../import-export/australia.html">Australia</a></li>
-</ul></li>
-    <li><a href="../gallery.html">Gallery</a></li>
-    <li><a href="../index.html#contact">Contact Us</a></li>
-  </ul>
+        <li class="dropdown">
+            <a href="#">Import/Export</a>
+            <ul class="dropdown-menu">
+                <li><a href="../import-export/usa.html">USA</a></li>
+                <li><a href="../import-export/maldives.html">Maldives</a></li>
+                <li><a href="../import-export/dubai.html">Dubai</a></li>
+                <li><a href="../import-export/south-africa.html">South Africa</a></li>
+                <li><a href="../import-export/canada.html">Canada</a></li>
+                <li><a href="../import-export/australia.html">Australia</a></li>
+            </ul>
+        </li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="../index.html#contact">Contact Us</a></li>
+    </ul>
 </nav>
     <header class="country-banner">
         <div class="country-card">
@@ -156,4 +148,5 @@
 
 </body>
 </html>
+
 
