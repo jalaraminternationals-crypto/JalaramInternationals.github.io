@@ -389,33 +389,30 @@
     </a>
 
   <script src="assets/js/main.js"></script>
-<script type="text/javascript">
+   <script>
+  // Function to initialize Google Translate
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
-      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
   }
 
+  // Custom function to switch language using cookie & reload
   function translateLanguage(lang) {
     if (!lang) return;
-
-    const interval = setInterval(() => {
-      const select = document.querySelector('.goog-te-combo');
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event('change'));
-        clearInterval(interval);
-      }
-    }, 300);
+    const from = 'en';
+    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
+    window.location.reload();
   }
 </script>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+<!-- Google Translate Library -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
+
 
 
 
