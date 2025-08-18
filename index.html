@@ -383,17 +383,22 @@
         <img src="assets/img/whatsapp-icon.png" alt="Chat on WhatsApp">
     </a>
 
-    <script src="assets/js/main.js"></script><script>
-        <script type="text/javascript">
+    <script src="assets/js/main.js"></script><script><script type="text/javascript">
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',          // Change if your site is in another language
+      includedLanguages: 'en,hi,gu,fr,de,es,zh-CN,ar,ja,ru', // Add desired languages
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
   }
 </script>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
   </body>
 </html>
+
 
 
 
