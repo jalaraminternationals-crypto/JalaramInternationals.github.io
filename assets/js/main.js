@@ -26,16 +26,7 @@ if (submenu) submenu.classList.toggle('show');
 });
 });
     
-<script>
-function translateLanguage(lang) {
-    if (lang) {
-        const currentUrl = window.location.href;
-        const encodedUrl = encodeURIComponent(currentUrl);
-        const translateUrl = `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodedUrl}`;
-        window.location.href = translateUrl;
-    }
-}
-</script>
+
 
 
 
