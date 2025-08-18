@@ -25,7 +25,9 @@ if (submenu) submenu.classList.toggle('show');
 }
 });
 });
-    
+    window.location.reload();
+
+
 
 
 
