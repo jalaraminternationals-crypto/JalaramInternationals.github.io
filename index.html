@@ -389,9 +389,10 @@
         <img src="assets/img/whatsapp-icon.png" alt="Chat on WhatsApp">
     </a>
 
-    <script src="assets/js/main.js"></script><script><script type="text/javascript">
- <script>
-  // Function to initialize Google Translate
+  <script src="assets/js/main.js"></script>
+
+<!-- Google Translate Setup -->
+<script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
@@ -400,18 +401,20 @@
     }, 'google_translate_element');
   }
 
-  // Language switcher function
   function translateLanguage(lang) {
     if (!lang) return;
-    const from = 'en';
-    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
-    window.location.reload();
+    const selectField = document.querySelector('.goog-te-combo');
+    if (selectField) {
+      selectField.value = lang;
+      selectField.dispatchEvent(new Event('change'));
+    }
   }
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   </body>
 </html>
+
 
 
 
