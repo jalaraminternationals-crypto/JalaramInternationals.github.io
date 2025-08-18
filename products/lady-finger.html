@@ -11,6 +11,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="product-page">
+    <!-- 🌐 Language Selector -->
+<div class="language-select">
+  <label for="language">🌐 Select Language: </label>
+  <select id="language" onchange="translateLanguage(this.value)">
+    <option value="">--Select--</option>
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+    <option value="de">German</option>
+    <option value="zh-CN">Chinese (Simplified)</option>
+    <option value="ar">Arabic</option>
+    <option value="hi">Hindi</option>
+    <option value="ja">Japanese</option>
+    <option value="ru">Russian</option>
+    <option value="gu">Gujarati</option>
+  </select>
+</div>
+
+<!-- Google Translate hidden widget (still required) -->
+<div id="google_translate_element" style="display:none;"></div>
+
 <nav>
     <ul class="menu">
         <li><a href="../index.html">Home</a></li>
@@ -141,5 +162,30 @@
 </a>
 
 <script src="../assets/js/main.js"></script>
+     <script>
+  // Function to initialize Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  // Language switcher function
+  function translateLanguage(lang) {
+    if (!lang) return;
+    const from = 'en';
+    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
+    window.location.reload();
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<!-- Google Translate Library -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
+
