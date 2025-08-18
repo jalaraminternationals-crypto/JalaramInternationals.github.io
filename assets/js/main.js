@@ -25,4 +25,23 @@ if (submenu) submenu.classList.toggle('show');
 }
 });
 });
+ <script>
+  // Function to initialize Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  // Language switcher function
+  function translateLanguage(lang) {
+    if (!lang) return;
+    const from = 'en';
+    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
+    window.location.reload();
+  }
+</script>
+
 
