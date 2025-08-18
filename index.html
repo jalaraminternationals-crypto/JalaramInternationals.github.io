@@ -63,8 +63,6 @@
   </select>
 </div>
 
-<!-- Google Translate hidden widget (still required) -->
-<div id="google_translate_element" style="display:none;"></div>
     <nav>
         <div class="nav-container">
             <!-- Logo and name on the left -->
@@ -389,10 +387,20 @@
     </a>
 
     <script src="assets/js/main.js"></script><script>
-     <!-- Google Translate Library -->
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
+        <script>
+  function translateLanguage(lang) {
+    if (lang) {
+      const currentUrl = window.location.href;
+      const encodedUrl = encodeURIComponent(currentUrl);
+      const translateUrl = `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodedUrl}`;
+      window.location.href = translateUrl;
+    }
+  }
+</script>
+
+  </body>
 </html>
+
 
 
 
