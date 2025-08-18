@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-      <script type="text/javascript" 
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
          <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -48,7 +45,6 @@
     </script>
 </head>
 <body>
-     <div id="google_translate_element"></div>
    <!-- 🌐 Language Selector -->
 <div class="language-select">
   <label for="language">🌐 Select Language: </label>
@@ -66,6 +62,9 @@
     <option value="gu">Gujarati</option>
   </select>
 </div>
+
+<!-- Google Translate hidden widget (still required) -->
+<div id="google_translate_element" style="display:none;"></div>
     <nav>
         <div class="nav-container">
             <!-- Logo and name on the left -->
@@ -390,19 +389,29 @@
     </a>
 
     <script src="assets/js/main.js"></script><script>
-     <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,de,zh-CN,ar,ru,pt,hi,ja', // Add or remove languages here
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE // This shows the dropdown
-      }, 'google_translate_element');
-    }
-  </script>
+      <script>
+  // Function to initialize Google Translate
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
 
-
+  // Language switcher function
+  function translateLanguage(lang) {
+    if (!lang) return;
+    const from = 'en';
+    document.cookie = 'googtrans=/' + from + '/' + lang + ';path=/';
+    window.location.reload();
+  }
+</script>
+<!-- Google Translate Library -->
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+
 
 
 
