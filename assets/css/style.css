@@ -541,3 +541,16 @@ footer {background:#003399;color:#fff;text-align:center;padding:15px;font-size:0
 /* Smooth scroll */
 html {scroll-behavior:smooth;}
 
+  .goog-logo-link, .goog-te-gadget {
+    display: none !important;
+  }
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0px !important;
+  }
+
+
+
+
