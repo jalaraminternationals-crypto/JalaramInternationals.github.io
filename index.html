@@ -390,16 +390,16 @@
 
     <script src="assets/js/main.js"></script>
 <script>
-  // Function to initialize Google Translate
+  // Google Translate widget initialization
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
-      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru',gu',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar,hi,ja,ru,gu',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
   }
 
-  // Custom function to switch language using cookie & reload
+  // Change language using cookie
   function translateLanguage(lang) {
     if (!lang) return;
     const from = 'en';
@@ -408,11 +408,12 @@
   }
 </script>
 
-<!-- Google Translate Library -->
+<!-- Google Translate JS library -->
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
+
 
 
 
