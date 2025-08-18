@@ -45,6 +45,9 @@
     </script>
 </head>
 <body>
+    <!-- Google Translate hidden widget (still required) -->
+<div id="google_translate_element" style="display:none;"></div>
+
    <!-- 🌐 Language Selector -->
 <div class="language-select">
   <label for="language">🌐 Select Language: </label>
@@ -62,10 +65,6 @@
     <option value="gu">Gujarati</option>
   </select>
 </div>
-
-<!-- Google Translate hidden widget (still required) -->
-<div id="google_translate_element" style="display:none;"></div>
-
     <nav>
         <div class="nav-container">
             <!-- Logo and name on the left -->
@@ -390,8 +389,6 @@
     </a>
 
   <script src="assets/js/main.js"></script>
-
-<!-- Google Translate Setup -->
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -403,17 +400,25 @@
 
   function translateLanguage(lang) {
     if (!lang) return;
-    const selectField = document.querySelector('.goog-te-combo');
-    if (selectField) {
-      selectField.value = lang;
-      selectField.dispatchEvent(new Event('change'));
-    }
+
+    const interval = setInterval(() => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+        clearInterval(interval);
+      }
+    }, 500);
   }
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- Load Google Translate -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
   </body>
 </html>
+
 
 
 
