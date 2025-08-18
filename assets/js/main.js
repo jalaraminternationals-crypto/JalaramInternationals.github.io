@@ -26,22 +26,16 @@ if (submenu) submenu.classList.toggle('show');
 });
 });
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en'
-      }, 'google_translate_element');
-    }
+ function changeLanguage(langCode) {
+      if (!langCode) return;
 
-    function translateLanguage(lang) {
-      if (lang === '') return;
+      // Get current page URL
+      const currentUrl = window.location.href;
 
-      const select = document.querySelector('.goog-te-combo');
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event('change'));
-      }
+      // Construct Google Translate URL
+      const translateUrl = `https://translate.google.com/translate?hl=${langCode}&sl=auto&tl=${langCode}&u=${encodeURIComponent(currentUrl)}`;
+
+      // Redirect to translated page
+      window.location.href = translateUrl;
     }
-  </script>
-  
 
