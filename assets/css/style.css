@@ -537,6 +537,84 @@ footer {background:#003399;color:#fff;text-align:center;padding:15px;font-size:0
   .dropdown-menu li a,.sub-menu li a {color:#003399;}
   .dropdown-sub>a::after {content:'▼';float:right;}
 }
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header & Nav */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Content */
+.content {
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive Design */
+
+/* Phones */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  nav ul {
+    justify-content: space-around;
+  }
+
+  body {
+    padding: 15px 30px;
+  }
+}
+
+/* Laptops and up */
+@media (min-width: 1025px) {
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
 
 /* Smooth scroll */
 html {scroll-behavior:smooth;}
@@ -550,6 +628,7 @@ html {scroll-behavior:smooth;}
   body {
     top: 0px !important;
   }
+
 
 
 
