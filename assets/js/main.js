@@ -27,6 +27,13 @@ if (submenu) submenu.classList.toggle('show');
 });
     window.location.reload();
 
+    <!-- Inside your HTML -->
+<button class="nav-toggle" onclick="document.querySelector('.menu').classList.toggle('show')">
+  ☰
+</button>
+
+
+
 
 
 
